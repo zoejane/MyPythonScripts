@@ -23,6 +23,8 @@ if len(sys.argv) ==2:
         url= 'http://gitbook.com'
     elif address == 'github':
         url ='http://github.com'
+    elif address =='zoeedit':
+        url ='https://www.gitbook.com/book/zoejane/zoe-py-tutorial/edit'
 
 
 webbrowser.get(chrome_path).open(url)
