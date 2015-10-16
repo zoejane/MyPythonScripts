@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 import webbrowser
 
 url = 'http://docs.python.org/'
