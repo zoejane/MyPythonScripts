@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import webbrowser
+import webbrowser,sys
 
 url = 'http://docs.python.org/'
 
@@ -12,5 +12,17 @@ chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
 # Linux
 # chrome_path = '/usr/bin/google-chrome %s'
+
+
+if len(sys.argv) ==2:
+    #['open-web.py',      'udemy'] -> 'udemy'
+    address = sys.argv[1]
+    if address == 'udemy':
+        url = 'https://www.udemy.com/automate/learn/'
+    elif address == 'gitbook':
+        url= 'http://gitbook.com'
+    elif address == 'github':
+        url ='http://github.com'
+
 
 webbrowser.get(chrome_path).open(url)
