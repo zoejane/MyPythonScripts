@@ -19,12 +19,15 @@ if len(sys.argv) ==2:
     address = sys.argv[1]
     if address == 'udemy':
         url = 'https://www.udemy.com/automate/learn/'
-    elif address == 'gitbook':
-        url= 'https://zoejane.gitbooks.io/zoe-py-tutorial/content/
-    elif address == 'github':
+    elif address == 'gb':
+        url= 'https://zoejane.gitbooks.io/zoe-py-tutorial/content/'
+    elif address == 'gh':
         url ='https://github.com/zoejane'
-    elif address =='zoeedit':
+    elif address =='edit':
         url ='https://www.gitbook.com/book/zoejane/zoe-py-tutorial/edit'
+    elif address  == 'en':
+        url ='https://app.yinxiang.com/Home.action'
 
 
 webbrowser.get(chrome_path).open(url)
+
