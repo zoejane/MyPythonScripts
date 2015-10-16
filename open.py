@@ -20,9 +20,9 @@ if len(sys.argv) ==2:
     if address == 'udemy':
         url = 'https://www.udemy.com/automate/learn/'
     elif address == 'gitbook':
-        url= 'http://gitbook.com'
+        url= 'https://zoejane.gitbooks.io/zoe-py-tutorial/content/
     elif address == 'github':
-        url ='http://github.com'
+        url ='https://github.com/zoejane'
     elif address =='zoeedit':
         url ='https://www.gitbook.com/book/zoejane/zoe-py-tutorial/edit'
 
