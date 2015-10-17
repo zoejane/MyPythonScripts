@@ -1,12 +1,12 @@
-import bs4, requests
+import  pywapi
+import string
 
-def weatherurl(weatherUrl):
-    res =requests.get(weatherUrl)
-    res.raise_for_status()
+weather_com_result = pywapi.get_weather_from_weather_com('10001')
+yahoo_result = pywapi.get_weather_from_yahoo('10001')
+noaa_result = pywapi.get_weather_from_noaa('KJFK')
 
-    soup=bs4.BeautifulSoup(res.text, 'html.parser')
-    elems = soup.select('#feature-history > table > tbody > tr.hi > td:nth-child(5)')
-    return elems[0].text.strip()
-    
-weather=weatherurl('http://www.accuweather.com/zh/cn/zhuzhou/59425/daily-weather-forecast/59425')
-print('The price is '+weather)
+print("Weather.com says: It is " + str.lower(weather_com_result['current_conditions']['text']) + " and " + weather_com_result['current_conditions']['temperature'] + "C now in New York.\n\n")
+
+print("Yahoo says: It is " + str.lower(yahoo_result['condition']['text']) + " and " + yahoo_result['condition']['temp'] + "C now in New York.\n\n")
+
+print("NOAA says: It is " + str.lower(noaa_result['weather']) + " and " + noaa_result['temp_c'] + "C now in New York.\n")
