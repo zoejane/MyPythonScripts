@@ -6,9 +6,8 @@ import sys
 if len(sys.argv) >1:
     diary=open('diary.txt','a')
     diary.write("\n" + content)
-    
-else:
 
+else:
     content = diary.read()
     print(content)
 
